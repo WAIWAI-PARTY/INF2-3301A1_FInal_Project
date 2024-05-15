@@ -67,10 +67,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Image\btSpeaker.jpg" />
+    <Content Include="Image\ipad.jpeg" />
+    <Content Include="Image\laptop.jpg" />
+    <Content Include="Image\monlightbar.jpg" />
+    <Content Include="Image\powerbank.jpg" />
+    <Content Include="Image\smartphone.jpg" />
+    <Content Include="Image\Smartwatch.jpg" />
+    <Content Include="Image\webcam.jpg" />
+    <Content Include="Image\wirelesscharger.jpg" />
+    <Content Include="Image\WirelessEarbuds.jpg" />
     <Content Include="Web.config" />
+    <Content Include="index.aspx" />
+    <Content Include="cart.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Item.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
