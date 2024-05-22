@@ -14,8 +14,10 @@
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Name</asp:TableHeaderCell>
                     <asp:TableHeaderCell>Price</asp:TableHeaderCell>
+                    
                 </asp:TableHeaderRow>
             </asp:Table>
+            <asp:button ID="continueShoppingButton" runat="server" Text="Continue Shopping" OnClick="continueShoppingButton_Click" />
         </div>
     </form>
 </body>
