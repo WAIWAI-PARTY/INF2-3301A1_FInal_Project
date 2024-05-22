@@ -19,24 +19,24 @@ namespace INF2_3301A1_FInal_Project
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            string json = @"
-            [
-                { ""name"": ""Wireless Earbud"", ""price"": 99 ,""quantity"": 0 },
-                { ""name"": ""Smartwatch"", ""price"": 199 ,""quantity"": 0 },
-                { ""name"": ""Power Bank"", ""price"": 29 ,""quantity"": 0 },
-                { ""name"": ""Monitor Light Bar"", ""price"": 149 ,""quantity"": 0 },
-                { ""name"": ""iPad"", ""price"": 499 ,""quantity"": 0 },
-                { ""name"": ""Laptop"", ""price"": 799 ,""quantity"": 0 },
-                { ""name"": ""Bluetooth Speaker"", ""price"": 69 ,""quantity"": 0 },
-                { ""name"": ""Smart Phone"", ""price"": 599 ,""quantity"": 0 },
-                { ""name"": ""Web Camera"", ""price"": 129 ,""quantity"": 0 },
-                { ""name"": ""Wireless Charging Pad"", ""price"": 39 ,""quantity"": 0 }
-            ]";
+            //string json = @"
+            //[
+            //    { ""name"": ""Wireless Earbud"", ""price"": 99 ,""quantity"": 0 },
+            //    { ""name"": ""Smartwatch"", ""price"": 199 ,""quantity"": 0 },
+            //    { ""name"": ""Power Bank"", ""price"": 29 ,""quantity"": 0 },
+            //    { ""name"": ""Monitor Light Bar"", ""price"": 149 ,""quantity"": 0 },
+            //    { ""name"": ""iPad"", ""price"": 499 ,""quantity"": 0 },
+            //    { ""name"": ""Laptop"", ""price"": 799 ,""quantity"": 0 },
+            //    { ""name"": ""Bluetooth Speaker"", ""price"": 69 ,""quantity"": 0 },
+            //    { ""name"": ""Smart Phone"", ""price"": 599 ,""quantity"": 0 },
+            //    { ""name"": ""Web Camera"", ""price"": 129 ,""quantity"": 0 },
+            //    { ""name"": ""Wireless Charging Pad"", ""price"": 39 ,""quantity"": 0 }
+            //]";
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            List<Item> itemList = serializer.Deserialize<List<Item>>(json);
+            //JavaScriptSerializer serializer = new JavaScriptSerializer();
+            //List<Item> itemList = serializer.Deserialize<List<Item>>(json);
 
-            Session["itemList"] = itemList;
+            //Session["itemList"] = itemList;
             Session["BackFromShoppingCart"] = false;
         }
 

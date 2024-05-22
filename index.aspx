@@ -62,7 +62,7 @@
          </div>
          <div id="content">
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card0">
             <img src="Image/WirelessEarbuds.jpg" alt="Product Image">
             <p>Wireless Earbud</p>
             <p class="price">$99</p>
@@ -80,10 +80,11 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label0" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card1">
             <img src="Image/Smartwatch.jpg" alt="Product Image">
             <p>Smartwatch</p>
             <p class="price">$199</p>
@@ -101,10 +102,11 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label1" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card2">
             <img src="/Image/powerbank.jpg" alt="Product Image">
             <p>Power Bank</p>
             <p class="price">$29</p>
@@ -122,10 +124,11 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label2" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card3">
             <img src="Image/monlightbar.jpg" alt="Product Image">
             <p>Monitor Light Bar</p>
             <p class="price">$149</p>
@@ -143,10 +146,11 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label3" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card4">
             <img src="Image/ipad.jpeg" alt="Product Image">
             <p>iPad</p>
             <p class="price">$49</p>
@@ -164,13 +168,14 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label4" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card5">
             <img src="Image/laptop.jpg" alt="Product Image">
             <p>Laptop</p>
-            <p class="price">$79</p>
+            <p class="price">$799</p>
             <label for="DropDownList5">Quantity:</label>
             <asp:DropDownList ID="DropDownList5" runat="server" OnSelectedIndexChanged="OnDdlSelect" AutoPostBack="true" >
                <asp:ListItem Text="0" Value="0" />
@@ -185,10 +190,11 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label5" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card6">
             <img src="Image/btSpeaker.jpg" alt="Product Image">
             <p>Bluetooth Speaker</p>
             <p class="price">$69</p>
@@ -206,13 +212,14 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label6" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card7">
             <img src="Image/smartphone.jpg" alt="Product Image">
             <p>Smart Phone</p>
-            <p class="price">$19</p>
+            <p class="price">$1199</p>
             <label for="DropDownList7">Quantity:</label>
             <asp:DropDownList ID="DropDownList7" runat="server" OnSelectedIndexChanged="OnDdlSelect" AutoPostBack="true" >
                <asp:ListItem Text="0" Value="0" />
@@ -227,13 +234,15 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label7" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card8">
             <img src="Image/webcam.jpg" alt="Product Image">
             <p>Web Camera</p>
             <p class="price">$129</p>
+
             <label for="DropDownList8">Quantity:</label>
             <asp:DropDownList ID="DropDownList8" runat="server" OnSelectedIndexChanged="OnDdlSelect" AutoPostBack="true" >
                <asp:ListItem Text="0" Value="0" />
@@ -248,10 +257,11 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label8" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <%--Item--%>
-         <div class="card">
+         <div class="card" runat="server" id="Card9">
             <img src="Image/wirelesscharger.jpg" alt="Product Image">
             <p>Wireless Charging Pad</p>
             <p class="price">$39</p>
@@ -269,11 +279,13 @@
                <asp:ListItem Text="9" Value="9" />
                <asp:ListItem Text="10" Value="10" />
             </asp:DropDownList>
+             <asp:Label ID="Label9" runat="server" Text="Total Price: $0"></asp:Label>
          </div>
          <%--Item--%>
          <div id="bottom">
             <p runat="server" id="totalHolder">Total Price: $0</p>
-            <asp:Button runat="server" ID="btn1" Text="Shopping cart" OnClick="To_Shopping_Cart"></asp:Button>
+             <asp:Button ID="AddToCartButton" runat="server" Text="Add All to Cart" OnClick="Add_To_Shopping_Cart" />
+            <asp:Button runat="server" ID="btn1" Text="Show Shopping cart" OnClick="To_Shopping_Cart"></asp:Button>
          </div>
       </form>
    </body>
