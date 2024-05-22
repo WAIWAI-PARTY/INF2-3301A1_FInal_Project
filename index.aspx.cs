@@ -15,7 +15,7 @@ namespace INF2_3301A1_FInal_Project
         }
         public void To_Shopping_Cart(object sender, EventArgs e)
         {
-
+            Response.Redirect("/cart.aspx");
         }
         public void OnDdlSelect(object sender, EventArgs e)
         {
