@@ -39,7 +39,7 @@ namespace INF2_3301A1_FInal_Project
         }
         protected void continueShoppingButton_Click(object sender, EventArgs e)
         {
-            // 將使用者重新導向到選購頁面
+            Session["BackFromShoppingCart"] = true;
             Response.Redirect("index.aspx");
         }
     }

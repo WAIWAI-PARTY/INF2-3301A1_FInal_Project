@@ -37,6 +37,7 @@ namespace INF2_3301A1_FInal_Project
             List<Item> itemList = serializer.Deserialize<List<Item>>(json);
 
             Session["itemList"] = itemList;
+            Session["BackFromShoppingCart"] = false;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
