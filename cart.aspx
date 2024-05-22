@@ -10,7 +10,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <p runat="server" id="textholder"></p>
+            <asp:Table ID="itemTable" runat="server">
+                <asp:TableHeaderRow>
+                    <asp:TableHeaderCell>Name</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Price</asp:TableHeaderCell>
+                </asp:TableHeaderRow>
+            </asp:Table>
         </div>
     </form>
 </body>
