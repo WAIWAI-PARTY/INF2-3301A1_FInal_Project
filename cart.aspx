@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form id="form1" runat="server">
@@ -17,7 +18,9 @@
                     
                 </asp:TableHeaderRow>
             </asp:Table>
-            <asp:button ID="continueShoppingButton" runat="server" Text="Continue Shopping" OnClick="continueShoppingButton_Click" />
+            <div id="bottom">
+                <asp:button class="AspButton" ID="continueShoppingButton" runat="server" Text="Continue Shopping" OnClick="continueShoppingButton_Click" />
+			</div>
         </div>
     </form>
 </body>

@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
@@ -66,18 +62,33 @@ namespace INF2_3301A1_FInal_Project
             Response.Redirect("/cart.aspx");
         }
 
+        protected void resetDDL(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                DropDownList quantityDDL = (DropDownList)FindControl($"DropDownList{i}");
+                quantityDDL.SelectedIndex = 0;
+            }
+
+        }
+
         protected void Add_To_Shopping_Cart(object sender, EventArgs e)
         {
             List<Item> itemList = new List<Item>();
 
             for (int i = 0; i < 10; i++)
             {
-                //string productName = ((HtmlGenericControl)FindControl($"Card{i}")).Controls[1].InnerText;
-                string priceText = ((HtmlGenericControl)FindControl($"Card{i}").Controls[2]).InnerText;
-                int price = int.Parse(priceText.Substring(1));
                 int quantity = int.Parse(((DropDownList)FindControl($"DropDownList{i}")).SelectedValue);
-                //Item item = new Item(productName, price, quantity);
-                //itemList.Add(item);
+                if (quantity <= 0)
+                {
+                    continue;
+                }
+                string productName = ((HtmlGenericControl)FindControl($"productName{i}")).InnerText;
+                string priceText = ((HtmlGenericControl)FindControl($"priceText{i}")).InnerText;
+                int price = int.Parse(priceText.Substring(1));
+                
+                Item item = new Item(productName, price, quantity);
+                itemList.Add(item);
             }
             Session["itemList"] = itemList;
 
@@ -86,65 +97,23 @@ namespace INF2_3301A1_FInal_Project
 
         protected void OnDdlSelect(object sender, EventArgs e)
         {
-            // Determine which DropDownList triggered the event
-            DropDownList ddl = sender as DropDownList;
-
-            if (ddl != null)
+            int total_price = 0;
+            for (int i = 0; i < 10; i++)
             {
-                int quantity = int.Parse(ddl.SelectedValue);
-                int price = 0;
-                System.Web.UI.WebControls.Label priceLabel = null;
-
-                switch (ddl.ID)
+                int quantity = int.Parse(((DropDownList)FindControl($"DropDownList{i}")).SelectedValue);
+                if (quantity <= 0)
                 {
-                    case "DropDownList0":
-                        price = 99;
-                        priceLabel = Label0;
-                        break;
-                    case "DropDownList1":
-                        price = 199;
-                        priceLabel = Label1;
-                        break;
-                    case "DropDownList2":
-                        price = 29;
-                        priceLabel = Label2;
-                        break;
-                    case "DropDownList3":
-                        price = 149;
-                        priceLabel = Label3;
-                        break;
-                    case "DropDownList4":
-                        price = 49;
-                        priceLabel = Label4;
-                        break;
-                    case "DropDownList5":
-                        price = 799;
-                        priceLabel = Label5;
-                        break;
-                    case "DropDownList6":
-                        price = 69;
-                        priceLabel = Label6;
-                        break;
-                    case "DropDownList7":
-                        price = 1199;
-                        priceLabel = Label7;
-                        break;
-                    case "DropDownList8":
-                        price = 129;
-                        priceLabel = Label8;
-                        break;
-                    case "DropDownList9":
-                        price = 39;
-                        priceLabel = Label9;
-                        break;
+                    continue;
                 }
+                string priceText = ((HtmlGenericControl)FindControl($"priceText{i}")).InnerText;
+                int price = int.Parse(priceText.Substring(1));
 
-                if (priceLabel != null)
-                {
-                    int totalPrice = price * quantity;
-                    priceLabel.Text = $"Total Price: ${totalPrice}";
-                }
+                int item_price = price * quantity;
+                System.Web.UI.WebControls.Label l = ((System.Web.UI.WebControls.Label)FindControl($"Label{i}"));
+                l.Text = $"Price: ${item_price}";
+                total_price += item_price;
             }
+            totalHolder.InnerText = $"Total Price: ${total_price}";
         }
     }
 }

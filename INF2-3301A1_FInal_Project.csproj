@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="history.aspx" />
     <Content Include="Image\btSpeaker.jpg" />
     <Content Include="Image\ipad.jpeg" />
     <Content Include="Image\laptop.jpg" />
@@ -78,11 +79,19 @@
     <Content Include="Image\webcam.jpg" />
     <Content Include="Image\wirelesscharger.jpg" />
     <Content Include="Image\WirelessEarbuds.jpg" />
+    <Content Include="style.css" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
     <Content Include="cart.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

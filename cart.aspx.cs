@@ -32,7 +32,6 @@ namespace INF2_3301A1_FInal_Project
                         row.Cells.Add(priceCell);
 
                         itemTable.Rows.Add(row);
-                        
                     }
                 }
             }

@@ -1,0 +1,120 @@
+﻿* {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    border-color: #333333;
+    border: thick;
+    font-size: 16px;
+    margin: 4px 2px;
+    border: none;
+    padding: 15px 32px;
+}
+
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+    #nav a {
+        float:left;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 14px 20px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+        border-radius: 4px;
+    }
+
+        #nav a:hover {
+            background-color: #FFA500; /* Bright Orange */
+        }
+
+        #nav a:active {
+            background-color: #FF4500; /* Darker Orange on Click */
+        }
+
+        #nav a:focus {
+            outline: none;
+        }
+
+#bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom:164px;
+}
+
+.card {
+    flex: 1; /* This makes all divs take equal space */
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+}
+    .card:hover {
+        background-color: #FFA500;
+    }
+img {
+    height:200px;
+    width: 200px;
+    background-color: white;
+}
+
+#bottom {
+    width: 100%;
+    padding-inline: 14px;
+}
+.AspButton, .ddl {
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .AspButton:hover {
+        color: black;
+        background-color: #FFA500;
+    }
+    .AspButton:active {
+        background-color: #B27300; /* Bright Orange */
+    }
+    .styled-dropdown {
+        appearance: none; /* Remove default arrow */
+        -webkit-appearance: none; /* Remove default arrow for Safari */
+    }
+
+    .styled-dropdown:focus {
+        outline: none;
+    }
+
+    /* Custom arrow for dropdown */
+    .styled-dropdown-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .styled-dropdown-wrapper:after {
+        content: '▼';
+        position: absolute;
+        right: 10px;
+        top: calc(50% - 7px);
+        pointer-events: none;
+    }
