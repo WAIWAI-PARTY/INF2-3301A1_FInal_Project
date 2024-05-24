@@ -15,11 +15,13 @@
                 <asp:TableHeaderRow>
                     <asp:TableHeaderCell>Name</asp:TableHeaderCell>
                     <asp:TableHeaderCell>Price</asp:TableHeaderCell>
-                    
+                    <asp:TableHeaderCell>Quantity</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Total</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
             </asp:Table>
             <div id="bottom">
                 <asp:button class="AspButton" ID="continueShoppingButton" runat="server" Text="Continue Shopping" OnClick="continueShoppingButton_Click" />
+                <asp:Button ID="btnSubmitOrder" runat="server" Text="Submit Order" OnClick="btnSubmitOrder_Click" />
 			</div>
         </div>
     </form>

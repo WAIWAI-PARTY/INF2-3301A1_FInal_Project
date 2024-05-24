@@ -10,6 +10,9 @@ namespace INF2_3301A1_FInal_Project
         public string name;
         public int price;
         public int quantity;
+        public Item()
+        {
+        }
         public Item(string name, int price, int quantity)
         {
             this.name = name;

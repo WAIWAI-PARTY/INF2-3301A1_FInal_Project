@@ -85,6 +85,7 @@
     <Content Include="cart.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Order.cs" />
     <Compile Include="history.aspx.cs">
       <DependentUpon>history.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
