@@ -237,9 +237,9 @@
 			<%--Item--%>
 			<div id="bottom">
 				<p runat="server" id="totalHolder">Total Price: $0</p>
-		        <asp:Button class="AspButton"  ID="ClearAll" runat="server" Text="Clear All Selection" OnClick="resetDDL" />
-				<asp:Button class="AspButton"  ID="AddToCartButton" runat="server" Text="Add All to Cart" OnClick="Add_To_Shopping_Cart" />
-				<asp:Button class="AspButton"  runat="server" ID="btn1" Text="Show Shopping cart" OnClick="To_Shopping_Cart" />
+		        <asp:Button class="AspButton"  ID="ClearAll" runat="server" Text="清除" OnClick="resetDDL" />
+				<asp:Button class="AspButton"  ID="AddToCartButton" runat="server" Text="加入購物車" OnClick="Add_To_Shopping_Cart" />
+				<asp:Button class="AspButton"  runat="server" ID="btn1" Text="檢視購物車" OnClick="To_Shopping_Cart" />
 			</div>
 		</form>
 	</body>

@@ -20,8 +20,8 @@
                 </asp:TableHeaderRow>
             </asp:Table>
             <div id="bottom">
-                <asp:button class="AspButton" ID="continueShoppingButton" runat="server" Text="Continue Shopping" OnClick="continueShoppingButton_Click" />
-                <asp:Button class="AspButton" ID="btnSubmitOrder" runat="server" Text="Submit Order" OnClick="btnSubmitOrder_Click" />
+                <asp:button class="AspButton" ID="continueShoppingButton" runat="server" Text="繼續購物" OnClick="continueShoppingButton_Click" />
+                <asp:Button class="AspButton" ID="btnSubmitOrder" runat="server" Text="確認訂單" OnClick="btnSubmitOrder_Click" />
 			</div>
         </div>
     </form>

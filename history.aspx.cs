@@ -22,14 +22,25 @@ namespace INF2_3301A1_FInal_Project
 
                     foreach (Order order in orderList)
                     {
+                        TableRow idRow = new TableRow();
+                        TableRow dateRow = new TableRow();
+
                         Table orderTable = new Table();
                         TableRow headerRow = new TableRow();
 
                         TableCell idHeader = new TableCell { Text = "Order ID" };
-                        headerRow.Cells.Add(idHeader);
+                        idRow.Cells.Add(idHeader);
 
                         TableCell dateHeader = new TableCell { Text = "Date" };
-                        headerRow.Cells.Add(dateHeader);
+                        dateRow.Cells.Add(dateHeader);
+
+                        TableCell idCell = new TableCell { Text = order.Id.ToString() };
+                        idRow.Cells.Add(idCell);
+
+                        TableCell dateCell = new TableCell { Text = order.dt.ToString() };
+                        dateRow.Cells.Add(dateCell);
+
+
 
                         TableCell nameHeader = new TableCell { Text = "Item Name" };
                         headerRow.Cells.Add(nameHeader);
@@ -43,17 +54,14 @@ namespace INF2_3301A1_FInal_Project
                         TableCell itemTotalHeader = new TableCell { Text = "Total Price" };
                         headerRow.Cells.Add(itemTotalHeader);
 
+
+                        orderTable.Rows.Add(idRow);
+                        orderTable.Rows.Add(dateRow);
                         orderTable.Rows.Add(headerRow);
 
                         foreach (Item item in order.items)
                         {
                             TableRow row = new TableRow();
-
-                            TableCell idCell = new TableCell { Text = order.Id.ToString() };
-                            row.Cells.Add(idCell);
-
-                            TableCell dateCell = new TableCell { Text = order.dt.ToString() };
-                            row.Cells.Add(dateCell);
 
                             TableCell nameCell = new TableCell { Text = item.name };
                             row.Cells.Add(nameCell);
