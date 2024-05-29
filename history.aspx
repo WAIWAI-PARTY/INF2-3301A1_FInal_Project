@@ -5,9 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <form id="form1" runat="server">
+        <div id="nav">
+			<a href="/index.aspx">Shopping</a>
+			<a>History</a>
+		</div>
         <div id="orderTables" runat="server"></div>
     </form>
 </body>

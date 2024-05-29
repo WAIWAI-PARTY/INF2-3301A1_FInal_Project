@@ -10,7 +10,7 @@
 		<form id="form1" runat="server">
 			<div id="nav">
 				<a>Shopping</a>
-				<a href="" >History</a>
+				<a href="history.aspx" >History</a>
 			</div>
 			<div id="content">
 			<%--Item--%>
